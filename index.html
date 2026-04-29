@@ -6,50 +6,49 @@
 <title>Grand Canyon Explorer</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f172a;--card:#1e293b;--text:#fff;--accent:#f59e0b}
-body.light{--bg:#f8fafc;--card:#ffffff;--text:#111}
+:root{--bg:#0f172a;--card:#1e293b;--text:#ffffff;--muted:#cbd5e1;--accent:#f59e0b}
+body.light{--bg:#f8fafc;--card:#ffffff;--text:#0f172a;--muted:#475569}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Poppins;background:var(--bg);color:var(--text);scroll-behavior:smooth}
 
-nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#020617;position:sticky;top:0;z-index:1000}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#020617;color:white;position:sticky;top:0;z-index:1000}
 nav a{color:white;text-decoration:none;margin:0 10px;font-weight:500}
 nav a:hover{color:var(--accent)}
 
-.hero{height:100vh;background:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470') center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero{height:100vh;background:url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b') center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center}
 .hero h1{font-size:60px;animation:fadeInUp 1s ease}
 .hero p{margin-top:10px;opacity:0;animation:fadeInUp 1s ease forwards;animation-delay:.5s}
 
 @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 .section{padding:70px 20px;max-width:1100px;margin:auto}
-.section h2{text-align:center;margin-bottom:30px}
+.section h2{text-align:center;margin-bottom:20px}
+.section p{color:var(--muted);line-height:1.6}
 
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
 .card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.3);transition:.3s}
 .card:hover{transform:translateY(-10px) scale(1.02)}
 .card img{width:100%;height:200px;object-fit:cover}
 .card div{padding:15px}
-.btn{background:var(--accent);padding:10px;border:none;border-radius:6px;margin-top:10px}
+.card p{color:var(--muted)}
+.btn{background:var(--accent);padding:10px;border:none;border-radius:6px;margin-top:10px;color:black;font-weight:600}
 
 .parallax{background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover fixed;height:300px;margin:40px 0}
 
-.gallery-container{position:relative}
-.gallery{display:flex;overflow-x:auto;gap:10px;scroll-behavior:smooth}
+.stats{display:flex;justify-content:space-around;text-align:center;margin-top:40px}
+.stats div{font-size:22px}
+
+.gallery{display:flex;overflow-x:auto;gap:10px}
 .gallery img{height:220px;border-radius:10px}
-.arrow{position:absolute;top:40%;background:rgba(0,0,0,0.5);border:none;color:white;padding:10px;border-radius:50%}
-.left{left:0}
-.right{right:0}
+
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.testimonial{background:var(--card);padding:20px;border-radius:10px}
+.testimonial p{color:var(--muted)}
 
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center}
 .modal-content{background:white;color:black;padding:30px;border-radius:10px;width:300px}
 
-.stats{display:flex;justify-content:space-around;text-align:center;margin-top:40px}
-.stats div{font-size:24px}
-
-.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.testimonial{background:var(--card);padding:20px;border-radius:10px}
-
-footer{text-align:center;padding:30px;background:#020617;margin-top:40px}
+footer{text-align:center;padding:30px;background:#020617;color:white;margin-top:40px}
 
 .fade{opacity:0;transform:translateY(20px);transition:1s}
 .fade.visible{opacity:1;transform:translateY(0)}
@@ -76,18 +75,18 @@ footer{text-align:center;padding:30px;background:#020617;margin-top:40px}
 <section id="home" class="hero fade">
 <div>
 <h1>Grand Canyon</h1>
-<p>Discover a world carved by time</p>
+<p>Carved by time. Experienced by millions.</p>
 </div>
 </section>
 
 <section class="section fade">
-<h2>About</h2>
-<p>The Grand Canyon is a breathtaking natural wonder shaped over millions of years. Its massive scale, layered rock formations, and unforgettable views create an experience unlike anywhere else on Earth.</p>
+<h2>About the Grand Canyon</h2>
+<p>The Grand Canyon, located in northern Arizona, is one of the most iconic geological landmarks in the world. Formed over nearly two billion years of Earth's history and carved by the Colorado River over millions of years, the canyon stretches approximately 277 miles in length, reaches widths of up to 18 miles, and descends over a mile deep. Its vast scale reveals layered bands of red rock, each representing different geological eras, making it a living record of Earth's past.</p>
 
 <div class="stats">
 <div><strong>277 Miles</strong><br>Length</div>
-<div><strong>1 Mile</strong><br>Depth</div>
-<div><strong>6M+</strong><br>Visitors/Year</div>
+<div><strong>6,000 ft</strong><br>Depth</div>
+<div><strong>5–6M</strong><br>Visitors/Year</div>
 </div>
 </section>
 
@@ -96,40 +95,68 @@ footer{text-align:center;padding:30px;background:#020617;margin-top:40px}
 <section id="explore" class="section fade">
 <h2>Explore Activities</h2>
 <div class="cards">
-<div class="card"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"><div><h3>Hiking</h3><p>Take on iconic trails with stunning canyon views.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"><div><h3>Helicopter Tours</h3><p>Experience the canyon from above.</p></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"><div><h3>Rafting</h3><p>Adventure through the Colorado River.</p></div></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+<div>
+<h3>Hiking Trails</h3>
+<p>The Bright Angel and South Kaibab trails are among the most famous routes, offering stunning views and access deep into the canyon. These trails range from moderate to extremely challenging, with dramatic elevation changes.</p>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+<div>
+<h3>Helicopter Tours</h3>
+<p>Helicopter tours provide a unique aerial perspective, allowing visitors to witness the immense scale of the canyon, the winding Colorado River, and hidden rock formations not visible from the rim.</p>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<div>
+<h3>Colorado River Rafting</h3>
+<p>Rafting trips along the Colorado River take visitors through the canyon itself, combining thrilling rapids with breathtaking scenery and geological exploration.</p>
+</div>
+</div>
 </div>
 </section>
 
 <section id="tours" class="section fade">
 <h2>Book a Tour</h2>
 <div class="cards">
-<div class="card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"><div><h3>River Adventure</h3><p>$199</p><button class="btn" onclick="openModal('checkout')">Book</button></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><div><h3>Sunset Tour</h3><p>$99</p><button class="btn" onclick="openModal('checkout')">Book</button></div></div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+<div>
+<h3>Full-Day River Expedition</h3>
+<p>$199 — Includes guided rafting, safety gear, and meals.</p>
+<button class="btn" onclick="openModal('checkout')">Book Now</button>
+</div>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+<div>
+<h3>Sunset Canyon Tour</h3>
+<p>$99 — Scenic viewpoints with guided storytelling and photography stops.</p>
+<button class="btn" onclick="openModal('checkout')">Book Now</button>
+</div>
+</div>
 </div>
 </section>
 
 <section class="section fade">
 <h2>Gallery</h2>
-<div class="gallery-container">
-<button class="arrow left" onclick="scrollGallery(-300)">◀</button>
-<div class="gallery" id="gallery">
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b">
 <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
 <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
 <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
-</div>
-<button class="arrow right" onclick="scrollGallery(300)">▶</button>
 </div>
 </section>
 
 <section class="section fade">
-<h2>What Visitors Say</h2>
+<h2>Visitor Reviews</h2>
 <div class="testimonials">
-<div class="testimonial">"Absolutely stunning views. Best trip ever!"</div>
-<div class="testimonial">"The hiking trails were unforgettable."</div>
-<div class="testimonial">"Worth every second. A must-visit location."</div>
+<div class="testimonial"><strong>Alex R.</strong><p>⭐️⭐️⭐️⭐️⭐️ — The views were unreal. Pictures don’t do it justice.</p></div>
+<div class="testimonial"><strong>Maria L.</strong><p>⭐️⭐️⭐️⭐️⭐️ — Hiking down the canyon was the most memorable experience of my life.</p></div>
+<div class="testimonial"><strong>Jason K.</strong><p>⭐️⭐️⭐️⭐️ — The helicopter tour gave a completely different perspective. Highly recommend.</p></div>
 </div>
 </section>
 
@@ -148,7 +175,6 @@ footer{text-align:center;padding:30px;background:#020617;margin-top:40px}
 function toggleMode(){document.body.classList.toggle('light')}
 function openModal(id){document.getElementById(id).style.display='flex'}
 function closeModal(id){document.getElementById(id).style.display='none'}
-function scrollGallery(x){document.getElementById('gallery').scrollBy({left:x,behavior:'smooth'})}
 
 const fades=document.querySelectorAll('.fade');
 window.addEventListener('scroll',()=>{
